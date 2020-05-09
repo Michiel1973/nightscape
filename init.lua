@@ -42,8 +42,8 @@ minetest.register_abm({
 	label = "place glow worms",
 	nodenames = {"air"},
 	neighbors = {"default:stone"},
-	interval = 60,
-	chance = 3200,
+	interval = 10,
+	chance = 800,
 	action = function(pos)
 		local node = minetest.get_node({x=pos.x, y=pos.y+1, z=pos.z})
 		if node.name == "default:stone" then
@@ -186,8 +186,8 @@ minetest.register_abm({
 	label = "place motyxia",
 	nodenames = {"default:stone"},
 	neighbors = {"air"},
-	interval = 88,
-	chance = 2500,
+	interval = 10,
+	chance = 1400,
 	action = function(pos)
 		local node = minetest.get_node({x=pos.x, y=pos.y+1, z=pos.z})
 		if node.name == "air" then
@@ -241,8 +241,8 @@ minetest.register_abm({
 	label = "place plankton",
 	nodenames = {"default:sand"},
 	neighbors = {"default:water_source"},
-	interval = 50,
-	chance = 5000,
+	interval = 10,
+	chance = 3000,
 	action = function(pos)
 		local node = minetest.get_node({x=pos.x, y=pos.y+1, z=pos.z})
 		if node.name == "default:water_source" then
@@ -513,7 +513,7 @@ minetest.register_node("nightscape:glow_worms_5", {
 minetest.register_abm({
 	label = "1",
 	nodenames = {"nightscape:glow_worms_1"},
-	interval = 20,
+	interval = 10,
 	chance = 3,
 	action = function(pos)
 		minetest.set_node(pos, {name="nightscape:glow_worms_2"})
@@ -522,7 +522,7 @@ minetest.register_abm({
 minetest.register_abm({
 	label = "2",
 	nodenames = {"nightscape:glow_worms_2"},
-	interval = 20,
+	interval = 10,
 	chance = 3,
 	action = function(pos)
 		minetest.set_node(pos, {name="nightscape:glow_worms_3"})
@@ -530,7 +530,7 @@ minetest.register_abm({
 })															 						minetest.register_abm({
 	label = "3",
 	nodenames = {"nightscape:glow_worms_3"},
-	interval = 20,
+	interval = 10,
 	chance = 3,
 	action = function(pos)
 		minetest.set_node(pos, {name="nightscape:glow_worms_4"})
@@ -539,7 +539,7 @@ minetest.register_abm({
 minetest.register_abm({
 	label = "4",
 	nodenames = {"nightscape:glow_worms_4"},
-	interval = 30,
+	interval = 20,
 	chance = 3,
 	action = function(pos)
 		minetest.set_node(pos, {name="nightscape:glow_worms_5"})
